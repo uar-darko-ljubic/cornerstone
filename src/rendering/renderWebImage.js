@@ -47,6 +47,10 @@ export function renderWebImage (enabledElement, invalidated) {
     const width = enabledElement.viewport.displayedArea.brhc.x - sx;
     const height = enabledElement.viewport.displayedArea.brhc.y - sy;
 
+    // Add image background
+    context.fillStyle = 'black';
+    context.fillRect(sx, sx, width, height);
+
     context.drawImage(image.getImage(), sx, sy, width, height, 0, 0, width, height);
   } else {
     renderColorImage(enabledElement, invalidated);
