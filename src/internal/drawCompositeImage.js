@@ -4,6 +4,7 @@ import { addColorLayer } from '../rendering/renderColorImage.js';
 import { addPseudoColorLayer } from '../rendering/renderPseudoColorImage.js';
 import { addLabelMapLayer } from '../rendering/renderLabelMapImage.js';
 import setToPixelCoordinateSystem from '../setToPixelCoordinateSystem.js';
+import canvasBackground from '../canvasBackground.js';
 
 function getViewportRatio (baseLayer, targetLayer) {
   if (!baseLayer.syncProps) {
@@ -166,8 +167,7 @@ export default function (enabledElement, invalidated) {
   context.setTransform(1, 0, 0, 1, 0, 0);
 
   // Clear the canvas
-  context.fillStyle = 'black';
-  context.fillRect(0, 0, enabledElement.canvas.width, enabledElement.canvas.height);
+  canvasBackground(enabledElement);
 
   // Render all visible layers
   renderLayers(context, visibleLayers, invalidated);

@@ -75,6 +75,7 @@ import { default as storedPixelDataToCanvasImageDataPseudocolorLUT } from './int
 import { default as triggerEvent } from './triggerEvent.js';
 import { default as updateImage } from './updateImage.js';
 import { default as webGL } from './webgl/index.js';
+import { default as canvasBackground } from './canvasBackground.js';
 
 // Rendering
 /**
@@ -148,6 +149,7 @@ const cornerstone = {
   imageCache,
   metaData,
   webGL,
+  canvasBackground,
   colors,
   convertImageToFalseColorImage,
   convertToFalseColorImage,
@@ -219,6 +221,7 @@ export {
   imageCache,
   metaData,
   webGL,
+  canvasBackground,
   colors,
   convertImageToFalseColorImage,
   convertToFalseColorImage,

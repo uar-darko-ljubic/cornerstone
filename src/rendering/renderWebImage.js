@@ -1,5 +1,6 @@
 import setToPixelCoordinateSystem from '../setToPixelCoordinateSystem.js';
 import { renderColorImage } from './renderColorImage.js';
+import canvasBackground from '../canvasBackground.js';
 
 /**
  * API function to draw a standard web image (PNG, JPG) to an enabledImage
@@ -32,8 +33,7 @@ export function renderWebImage (enabledElement, invalidated) {
     context.setTransform(1, 0, 0, 1, 0, 0);
 
     // Clear the canvas
-    context.fillStyle = 'black';
-    context.fillRect(0, 0, enabledElement.canvas.width, enabledElement.canvas.height);
+    canvasBackground(enabledElement);
 
     // Turn off image smooth/interpolation if pixelReplication is set in the viewport
     context.imageSmoothingEnabled = !enabledElement.viewport.pixelReplication;
