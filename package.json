@@ -1,5 +1,5 @@
 {
-  "name": "cornerstone-core",
+  "name": "cs-core-bg",
   "version": "2.2.8",
   "description": "HTML5 Medical Image Viewer Component",
   "main": "./dist/cornerstone.js",
@@ -9,12 +9,12 @@
     "imaging"
   ],
   "author": "Chris Hafey",
-  "homepage": "https://github.com/cornerstonejs/cornerstone",
+  "homepage": "https://github.com/uar-darko-ljubic/cornerstone",
   "license": "MIT",
   "module": "./dist/cornerstone.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornerstonejs/cornerstone.git"
+    "url": "https://github.com/uar-darko-ljubic/cornerstone.git"
   },
   "scripts": {
     "apidocs:generate": "npm run clean:docs && documentation build src/index.js -f md -c documentation.yml -o docs/api.md",
